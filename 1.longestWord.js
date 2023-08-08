@@ -18,7 +18,7 @@ const longestWord = (input)=>{
 
     let str = input.split(" "); //creating array of string 
 
-    
+    //let maxLength = 0;
     let longestWord ="";
 
     for(let i=0; i<str.length;i++)
