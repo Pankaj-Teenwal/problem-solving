@@ -13,7 +13,7 @@ function sortArray(arr){
     {
         for(let j=0; j<arr.length;j++)
         {
-            if(arr[j]>arr[j+1]){
+            if(arr[j]<arr[j+1]){
                 let tamp = arr[j];
 
                 arr[j] = arr[j+1];
@@ -27,6 +27,6 @@ function sortArray(arr){
 }
 
 
-let arr = [10,1,7,6,14,9,20,58,63,254,45,63];
+let arr = [0,1,1,0,1,0,1,0,1,0,1,0];
 
 console.log(sortArray(arr));
