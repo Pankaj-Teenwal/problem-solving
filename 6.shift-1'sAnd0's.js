@@ -1,19 +1,18 @@
 
 function shift(arr) {
-
-    for (let i = 0; i < arr.length / 2; i++) {
-        let firstElem = arr[i];
-        let lastElem = arr[arr.length - 1];
-
-        if (arr[0] > arr[length - 1]) {
-
-            let temp = arr[firstElem];
-            arr[firstElem] = arr[lastElem];
-            arr[lastElem] = temp;
-
+    for(let i=0;i<1;i++)
+    {
+        for(let j=0; j<arr.length;j++){
+            if(arr[j]===1){
+                let element = arr.splice(0,1);
+                arr.push(element);
+            
+            }
+            break;
         }
     }
     return arr;
+
 }
 
 let arr = [1, 1, 1, 0, 0, 0, 1, 1, 1, 1, 0, 0, 0, 1, 1, 1, 0, 0]

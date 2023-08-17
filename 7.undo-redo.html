@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+     <label for="input">Enter Text</label>
+     <input type="text" form="input" id="input" oninput="takeInput()">
+     
+     <br>
+     <p id="output"></p>
+     <br>
+     <br>
+
+     <button id="undo-btn" onclick="undo()">Undo</button>
+     <button id="redo-btn">Redo</button>
+</body>
+</html>
+
+<script>
+    let arr = 0;
+    let poppedValue=0;
+    let pushedValue=0;
+    
+    function takeInput(){
+        let inputText = document.getElementById("input").value
+        arr = inputText.split("");
+        document.getElementById("output").innerHTML= inputText;
+    
+    }
+
+    function undo(){
+       let poppedValue = arr.pop();
+       console.log(poppedValue)
+        
+    }
+
+
+
+
+
+
+</script>

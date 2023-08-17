@@ -1,34 +1,14 @@
-/**
- * 
- * Q. remove all duplicate elements form string;
- */
-function removeDuplicate(arr){
-    arr.toLowerCase();
-    arr= arr.split("");
-    let result = '';
+arr = [1, 1, 1, 0, 1, 0, 0, 1, 1, 0, 0, 0, 1, 0, 0, 0, 1];
 
-    for(let i=0; i<arr.length;i++)
-    {
-        let duplicate = false;
-
-        for(let j=0; j<result.length;j++)
-        {
-            if(arr[i]===result[j])
-            {
-                duplicate= true;
-                break;
-            }
-        }
-
-        if(!duplicate){
-            result+=arr[i];
-        }
+for(let i=0 ; i<arr.length; i++)
+{
+    
+    if(arr[i]===1){
+        let element = arr.splice(i,i+1);
+        arr.push(element);
     }
-    return result;
+
 }
+console.log(arr);
 
-
-
-let str = "Programming";
-
-console.log(removeDuplicate(str));
+console.log(0-1);
