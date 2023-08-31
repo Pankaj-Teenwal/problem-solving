@@ -1,4 +1,4 @@
-const colors = ["red", "blue"];
+const colors = ["red", "blue", "olive"];
 
 const data = [
   {
