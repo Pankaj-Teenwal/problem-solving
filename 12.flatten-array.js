@@ -14,10 +14,11 @@
 
 
 
-var result = [];
+// var result = [];
 
 
 const flatArr = (arr) => {
+    var result =[]
     for (let i = 0; i < arr.length; i++)
         if (Array.isArray(arr[i])) {
             newArr = arr[i];
@@ -28,10 +29,10 @@ const flatArr = (arr) => {
         }
 
     return result;
-}
-[1, 2, 3, 4, 5, [5, 6, 7]]
+    
+};
 
-let arr = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, [50,[101,102,103,104], 100], 11], 12], [13, 14, 15]];
+let arr = [1,2,3,4, [1,2], [3,4, [3,4]] , 5];
 
 console.log("Flat arr", flatArr(arr));
 
