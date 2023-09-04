@@ -11,27 +11,23 @@
 </html>
 
 <script>
+const printReverse = (num)=>{
 
-const flatArr = (arr)=>{
+    const iteratenumber = (i)=>{
+        console.log(i);
+        if(i!==0){
+            num--;
+            iteratenumber(num);
+        }
+    }
 
-    let result = [];
-for(let i=0; i<arr.length;i++)
-if(Array.isArray(arr[i])){
-    newArr = arr[i];
-    
-    flatArr(newArr);
-}
-else{
-    result.push(arr[i]);
-}
 
-return result;
+    iteratenumber(num);
 }
 
 
-let arr = [1,2,3,4,5,[5,6,7]];
-
-console.log("Flat arr",flatArr(arr));
 
 
+
+console.log(printReverse(10));
 </script>
