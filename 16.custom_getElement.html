@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Custom getElementById</title>
+    <?xml version="1.0" encoding="UTF-8"?>
+</head>
+<body>
+        <h1 id="hello">hello world!</h1>
+        <p id="para">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quam quisquam maxime unde perferendis excepturi amet asperiores facilis. Soluta accusamus culpa quasi expedita rerum incidunt dolores deleniti eum dolorum esse! Esse?
+        </p>
+        <p id="para2">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi tempora, pariatur, sint unde inventore iusto dolore recusandae voluptatibus ad, beatae fugit quae mollitia. Harum optio suscipit hic, dolore blanditiis fuga labore in placeat quibusdam, veniam animi ea molestias quisquam unde nulla. Ipsa quaerat nesciunt dolore expedita nisi nihil, necessitatibus quibusdam.
+        </p>
+        <h3 id="hello">Hello Everyone i am learning ReactJs :)</h3>
+</body>
+</html>
+
+<script>
+    function getElementUsing(id){
+        console.log(typeof(window.document.body))
+
+        let documentBody = window.document.body;
+
+        for(const property in documentBody){
+            console.log(`${documentBody[property]}`);
+        }
+    }
+
+
+    getElementUsing("home");
+</script>

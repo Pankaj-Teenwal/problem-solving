@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <ul class="header-list">
+          <li class="footer-list-item para">Home Top</li>
+          <li class="footer-list-item para">About Top</li>
+          <li class="footer-list-item para">Contact Top</li>
+        </ul>
+      </div>
+      <section>
+        <div>
+          <div>
+            <div>
+              <div>
+                <p class="para">Hello para from nested</p>
+              </div>
+            </div>
+            <p class="para">Hello para from nested 2</p>
+            <p class="para">Hello para from nested 3</p>
+            <p class="para">Hello para from nested 4</p>
+            <p class="para">Hello para from nested 5</p>
+          </div>
+        </div>
+      </section>
+      <div id="footer">
+        <ul class="footer-list">
+          <li class="footer-list-item">Home</li>
+          <li class="footer-list-item">About</li>
+          <li class="footer-list-item">Contact</li>
+        </ul>
+      </div>
+    </div>
+  </body>
+</html>
+
+<script>
+  // const paraElems = document.getElementsByClassName("para");
+  // console.log("paraElems: ", paraElems);
+
+
+
+  let body = window.document.body;
+  function printBodyElem(){
+    for(let i=0; i< body.length;i++){
+    console.log(body[i])
+    }
+  }
+  
+  // printBodyElem();
+
+
+  // for (let item of paraElems) {
+  //   item.style.color = "red";
+  // } */
+  /*
+  algo:- 
+  1:first we will found all the avaliable nodes in the file that will give all nodes in the object.
+  2:we will have have a empty array.
+  3:then we will iterate all the nodes then find out that the node have the class name, and if the nodes have nested node then we again check for matching class. if we found class name at any stage we simply push that class to the empty array.
+
+
+  
+  
+  
+  
+  
+  
+  */
+
+
+
+
+
+
+  // function getCustomElementsByClassName(classKey) {
+  //   // Write logic over here
+  // }
+
+  // const list = getCustomElementsByClassName("para");
+</script>

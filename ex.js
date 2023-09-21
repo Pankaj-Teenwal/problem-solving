@@ -1,37 +1,38 @@
-/**
- * 
- * @description Q. Flatten Deeply Neasted Array
- * 
- * i/p:- [1, 2, 3, [4, 5, 6], [7, 8, [9, 10,[50,100], 11], 12], [13, 14, 15]]
- * o/p:- [1,  2,  3,  4,   5,  6,  7, 8,  9, 10, 50, 100, 11, 12, 13, 14, 15]
- * 
- * 
- * step:1 we create a function that take array as argument.
- * step:2 we itrate the array element and check wether the element is number or an array
- * step:3 if elemtn is number then we simply push that element in empty result array.
- * step:4 if element is array then we simply call that function itself and push all the element in the result array
- */
+let table = {
+    85: {
+        50: 97,
+        52: 1.01,
+        54: 1.06,
+        56: 1.11,
+    },
+
+    86: {
+        50: 0.94,
+        52: 0.98,
+        54: 1.02,
+    },
+
+    87: {
+        50: 0.91,
+        52: 0.95,
+        54: 0.99,
+        56: 1.03,
+    },
+};
 
 
+const findTableValue = (disctemp, wetBulb)=>{
+    
 
-var result = [];
+    if(!table.hasOwnProperty(disctemp)){
+        return null;
+    }
 
-
-const flatArr = (arr) => {
-    for (let i = 0; i < arr.length; i++)
-        if (Array.isArray(arr[i])) {
-            newArr = arr[i];
-            flatArr(newArr);
-        }
-        else {
-            result.push(arr[i]);
-        }
-
-    return result;
+    return table [disctemp] [wetBulb] || null;
 }
-[1, 2, 3, 4, 5, [5, 6, 7]]
 
-let arr = [1, 2, 3, [4, 5, 6], [7, 8, [9, 10, [50,[101,102,103,104], 100], 11], 12], [13, 14, 15]];
+const findTableValueV2 =(disctemp, wetBulb)=>{
+    return table?.[disctemp]?.[wetBulb] || null;
+}
 
-console.log("Flat arr", flatArr(arr));
-
+console.log(findTableValueV2(85,52));
