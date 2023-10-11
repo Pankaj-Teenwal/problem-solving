@@ -8,19 +8,33 @@
  */
 
 const removeDuplicate=(str)=>{
-    let result ={};
+    let mapping ={};
+    let result ="";
     for(let i=0; i<str.length;i++){
         const key = str[i];
-        if(result.hasOwnProperty(key)){
-            result[key] = result[key]+1;
-        }
-        result[key] =1;
-    }
-    return Object.keys(result);   
-    
+        // if(mapping.hasOwnProperty(key)){
+        //     mapping[key] = mapping[key]+1;
+        // }
+        // else{
+        //     mapping[key] =1;
+        //     result = result+key;
+        // }
+           
+        mapping.hasOwnProperty(key)? mapping[key] = mapping[key]+1 : mapping[key] =1; result = result+mapping[key];
 
+
+    }
+    console.log("result: ", result);
+    return mapping;
 
     
 }
 
-console.log(removeDuplicate("pankaj"))
+console.log(removeDuplicate("pankaj"));
+/*
+if(mapping.hasOwnProperty(key)){
+            mapping[key] = mapping[key]+1;
+        }
+        mapping[key] =1;
+
+*/
