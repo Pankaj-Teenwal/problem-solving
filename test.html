@@ -1,33 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Document</title>
-</head>
-<body>
-    
-</body>
+  </head>
+  <body></body>
 </html>
 
 <script>
-const printReverse = (num)=>{
+  function sum(num1, num2 = num1) {
+    console.log(num1 + num2);
+  }
 
-    const iteratenumber = (i)=>{
-        console.log(i);
-        if(i!==0){
-            num--;
-            iteratenumber(num);
-        }
-    }
-
-
-    iteratenumber(num);
-}
-
-
-
-
-
-console.log(printReverse(10));
+  sum(10);
 </script>

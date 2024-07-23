@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+    let inputArray =
+        "a ";
+    const findLastWordLength = (inputArray) => {
+
+        let wordLength = 0;
+        let flag = false;
+        inputArray = inputArray.split("")
+        console.log("inputArray", inputArray)
+
+        if (inputArray.length == 1 && inputArray != " ") {
+            return 1
+        }
+
+        for (let i = inputArray.length - 1; i >= 0; i--) {
+            if (inputArray[i] == " ") {
+                if (flag) {
+                    return wordLength;
+                }
+                continue;
+            }
+            else {
+                wordLength++
+                flag = true;
+                if(i==0){
+                    return wordLength;
+                }
+            }
+        }
+    }
+
+    let lastWordLength = findLastWordLength(inputArray)
+    console.log("lastWordLength", lastWordLength)
+</script>

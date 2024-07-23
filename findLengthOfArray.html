@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+
+</html>
+
+<script>
+
+    // const factorial = (n)=>{
+
+    //     // //base Case if(n==0){
+    //     //     return 1
+    //     // }
+    //     if(n==0){
+    //         return 1;
+    //     }
+    //     let result = n * factorial(n-1)
+
+    //     return result;
+
+    // }
+
+    // let n = 10
+
+    // let ans = factorial(n)
+    // console.log(ans)
+
+    const findLengthOfArray = (arr, i=0)=>{
+
+        if(arr[i] != undefined){
+            return 1+findLengthOfArray(arr, i+1)
+        }
+        else{
+            return 0
+        }
+
+    }
+
+    let arr = [1,2,3,4,5,6]
+
+    console.log(findLengthOfArray(arr))
+    
+
+</script>
